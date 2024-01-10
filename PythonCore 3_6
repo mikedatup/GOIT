@@ -1,0 +1,24 @@
+def format_string(string, length=0):
+    if len(string) < length:
+        print("shorter")
+        spaces = length - len(string)
+        append = " " * spaces
+        string = string + append
+        print(string)
+        print(length)
+
+    elif len(string) >= length:
+        print("same or longer")
+        print(string)
+        print(length)
+
+    return string
+
+string = input("String?: ")
+length = int(input("Length?: "))
+
+
+formatted_string = format_string(string, length)
+
+print('Formatted string:', formatted_string)
+print('end')
